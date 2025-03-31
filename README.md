@@ -9,7 +9,7 @@
 
 ## 📊 Benchmarks
 
-| Metric | LightPredict | Standard Qwen2-0.5B | GPT-3.5 Turbo |
+| Metric | LightTxt-Predict Qwen2 | Standard Qwen2-0.5B | GPT-3.5 Turbo |
 |--------|-------------|---------------------|---------------|
 | Avg. Latency | 17.4ms | ~20ms | 50-100ms |
 | Model Size | 942.3 MB | 1.17 GB | N/A (Cloud) |
