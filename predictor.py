@@ -8,8 +8,11 @@ class Predictor:
     """Ultra-lightweight LLM-based predictive text system with performance optimizations"""
     
     # NOTE: Use newer Qwen/Qwen2.5-0.5B for higher confidence but higher latency
-    
-    # Defult to Qwen/Qwen2-0.5BB for lower latency
+    # NOTE: For even lower latency, use distilgpt2 for worse results but lower latency
+
+    # NOTE: Test microsoft/Phi-4-mini-instruct (might be better on faster machines) vs qwen
+
+    # Default to Qwen/Qwen2-0.5B for lower latency
     def __init__(self, model_name="Qwen/Qwen2-0.5B", cache_dir="model_cache", quantize=True, 
                 precompute_common=True, use_half_precision=True):
         """Initialize the lightweight LLM model and tokenizer with optimizations"""
