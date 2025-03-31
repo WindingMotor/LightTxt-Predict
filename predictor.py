@@ -7,8 +7,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 class Predictor:
     """Ultra-lightweight LLM-based predictive text system with performance optimizations"""
     
+    # NOTE: Use newer Qwen/Qwen2.5-0.5B for higher confidence but higher latency
+    
+    # Defult to Qwen/Qwen2-0.5BB for lower latency
     def __init__(self, model_name="Qwen/Qwen2-0.5B", cache_dir="model_cache", quantize=True, 
-                 precompute_common=True, use_half_precision=True):
+                precompute_common=True, use_half_precision=True):
         """Initialize the lightweight LLM model and tokenizer with optimizations"""
         self.cache_dir = cache_dir
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
